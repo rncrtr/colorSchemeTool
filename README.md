@@ -6,6 +6,8 @@ Please note that converted color schemes may not look 100% precise because of th
 
 Note that the tool requires Python version 2.7. The default version of Python installed on macOS X Snow Leopard is 2.6; you'll need to use Python from MacPorts/Homebrew if you'd like to run the tool on 10.6.
 
+If you are using python 3.3 or earlier, the colorSchemeTool.py needs to have the line with plistlib.load(f) changed to plistlib.readPlist(f) as load wasn't available until python 3.4. If you got an error like "AttributeError: 'module' object has no attribute 'load'", this is the fix you need.
+
 # How to convert VSCode theme
 **Note:** please check if the desired theme already exists in the [JetBrains plugin repository](https://plugins.jetbrains.com/) before converting it.
 1. Clone the `colorSchemeTool` code.
